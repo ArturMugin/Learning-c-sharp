@@ -19,11 +19,16 @@ namespace training
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        // if nothing was outputed OVERLOAD will run this function
-/*        public string Output()
+        public override string ToString()
         {
-            return $"My name is {FullName}";
-        }*/
+            return FullName;
+        }
+
+        // if nothing was outputed OVERLOAD will run this function
+        /*        public string Output()
+                {
+                    return $"My name is {FullName}";
+                }*/
 
         public string Output(int times = 5)
         {
