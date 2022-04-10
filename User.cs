@@ -12,14 +12,20 @@ namespace training
         {
             get
             {
-                return $"{FirstName} {LastName}"; 
+                return FirstName + " " + LastName; 
             }
 
         }
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public string Output(int times)
+        // if nothing was outputed OVERLOAD will run this function
+/*        public string Output()
+        {
+            return $"My name is {FullName}";
+        }*/
+
+        public string Output(int times = 5)
         {
             string message = "";
             for (int i = 0; i < times; i++){ 
@@ -41,6 +47,22 @@ namespace training
         {
             Console.Write("Static method. Print user");
             Console.WriteLine(user.Output(1));
+        }
+
+        public static int Find(List<User> users, string fullName)
+        {
+            for (int i = 0; i < users.Count; i++)
+            {
+
+                    if (users[i].FullName == fullName)
+                    {
+                        return i;
+                    }
+                
+            }
+            return -300;
+
+
         }
 
     }

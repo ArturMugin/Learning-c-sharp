@@ -8,26 +8,29 @@ namespace Training
         static void Main(string[] args)
         {
             Program MyProgram = new Program();
-            MyProgram.doSometing();
+            MyProgram.DoSometing();
 
         }
 
-        public void doSometing()
+        public void DoSometing()
         {
             User user = new User();
             user.FirstName = "Arthur";
             user.LastName = "Mugin";
-            //User.PrintUser(user);
 
             User user2 = new User();
-            user2.FirstName = "Bob";
+            user2.FirstName = "Vova";
 
 
-            List<User> users = new List<User>();
-            users.Add(user);
-            users.Add(user2);
+            User user3 = new User();
+            user3.LastName = "Barduk";
 
-            User.PrintUsers(users);
+
+            List<User> users = new List<User>()
+            {
+                user, user2, user3
+            };
+            Console.Write(User.Find(users, "Vova "));
 
         }
 
