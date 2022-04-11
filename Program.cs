@@ -20,10 +20,19 @@ namespace Training
 
 
             User user2 = new User();
-            user2.FirstName = "Arthur";
-            user2.LastName = "Mugin";
+            user2.FirstName = "Bob";
+            user2.LastName = "Marley";
 
-            Console.WriteLine(user.Equals(user2));
+            List<User> users = new List<User>()
+            {
+                user, user2
+            };
+            //declare the usre that I am searching
+            User search = new User();
+            search.FirstName = "Bob";
+            search.LastName = "Marley";
+
+            Console.Write(User.Find(users, search));
 
         }
 

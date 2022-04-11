@@ -24,12 +24,6 @@ namespace training
             return FullName;
         }
 
-        // if nothing was outputed OVERLOAD will run this function
-        /*        public string Output()
-                {
-                    return $"My name is {FullName}";
-                }*/
-
         public override bool Equals(object obj)
         {
             if(FullName == ((User)obj).FullName)
@@ -63,13 +57,27 @@ namespace training
 
                     if (users[i].FullName == fullName)
                     {
+                        //return the index of the user
                         return i;
                     }
                 
             }
             return -300;
 
+        }
 
+        public static int Find(List<User> users, User user)
+        {
+            for (int i = 0; i < users.Count; i++)
+            {
+
+                if (users[i].Equals(user))
+                {
+                    return i;
+                }
+
+            }
+            return -300;
         }
 
     }
