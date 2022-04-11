@@ -8,6 +8,7 @@ namespace training
 {
     internal class User
     {
+        public bool Verified { get; set; } = false;
         public string FullName
         {
             get
@@ -19,71 +20,9 @@ namespace training
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public override string ToString()
+        public virtual void HelloToConsole()
         {
-            return FullName;
-        }
-
-        public override int GetHashCode()
-        {
-            return FullName.GetHashCode();
-        }
-
-        //if users have the same FUllName they are the same entity
-        public override bool Equals(object obj)
-        {
-            if(FullName == ((User)obj).FullName)
-            {
-                return true;
-            }
-            else
-            { 
-                return false; 
-            }
-        }
-
-        public static void PrintUsers(List<User> users)
-        {
-            foreach (User user in users)
-            {
-                Console.WriteLine(user.ToString);
-            }
-        }
-
-        public static void PrintUser(User user)
-        {
-            Console.Write("Static method. Print user");
-            Console.WriteLine(user);
-        }
-
-        public static int Find(List<User> users, string fullName)
-        {
-            for (int i = 0; i < users.Count; i++)
-            {
-
-                    if (users[i].FullName == fullName)
-                    {
-                        //return the index of the user
-                        return i;
-                    }
-                
-            }
-            return -300;
-
-        }
-
-        public static int Find(List<User> users, User user)
-        {
-            for (int i = 0; i < users.Count; i++)
-            {
-
-                if (users[i].Equals(user))
-                {
-                    return i;
-                }
-
-            }
-            return -300;
+            Console.WriteLine($"Hi, my name is {FullName}");
         }
 
     }

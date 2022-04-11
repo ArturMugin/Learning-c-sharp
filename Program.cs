@@ -14,26 +14,10 @@ namespace Training
 
         public void DoSometing()
         {
-            User user = new User();
-            user.FirstName = "Arthur";
-            user.LastName = "Mugin";
-
-
-            User user2 = new User();
-            user2.FirstName = "Bob";
-            user2.LastName = "Marley";
-
-            List<User> users = new List<User>()
-            {
-                user, user2
-            };
-            //declare the usre that I am searching
-            User search = new User();
-            search.FirstName = "Bob";
-            search.LastName = "Marley";
-
-            Console.Write(User.Find(users, search));
-
+            Student me = new Student();
+            me.FirstName = "Arthur";
+            me.Verified = true;
+            me.HelloToConsole();
         }
 
     }
