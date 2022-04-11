@@ -6,24 +6,22 @@ using System.Threading.Tasks;
 
 namespace training
 {
-    internal class User
+    public abstract class User
     {
+        public User()
+        {
+            Console.WriteLine("User being creted");
+        }
         public bool Verified { get; set; } = false;
         public string FullName
         {
             get
             {
-                return FirstName + " " + LastName; 
+                return FirstName + " " + LastName;
             }
-
         }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
-        public virtual void HelloToConsole()
-        {
-            Console.WriteLine($"Hi im {FullName}");
-        }
-
+        public abstract  void HelloToConsole();
     }
 }

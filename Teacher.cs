@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace training
 {
-    internal class Teacher : User
+    public class Teacher : User
     {
+        public Teacher()
+        {
+            Console.WriteLine("Teacher was created");
+        }
         public override void HelloToConsole()
         {
             Console.WriteLine($"Helli, I am TEACHER, my name is {FullName.ToUpper()} and I come from Teacher.cs");
