@@ -10,7 +10,12 @@ namespace training
     {
         public User()
         {
-            Console.WriteLine("User being creted");
+            //Console.WriteLine("User being creted");
+        }
+        public User(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
         }
         public bool Verified { get; set; } = false;
         public string FullName
@@ -20,8 +25,8 @@ namespace training
                 return FirstName + " " + LastName;
             }
         }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string FirstName { get; }
+        public string LastName { get; }
         public abstract  void HelloToConsole();
     }
 }

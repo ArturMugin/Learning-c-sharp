@@ -10,15 +10,10 @@ namespace training
     {
     
 
-        public Student()
-        {
-            Console.WriteLine("Student was created");
-        }
 
-        public Student(string firstName, string lastName)
+        public Student(string firstName, string lastName) : base(firstName, lastName)
         {
-            FirstName = firstName;
-            LastName = lastName;
+
         }
 
         public override void HelloToConsole()
