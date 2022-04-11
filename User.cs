@@ -24,6 +24,12 @@ namespace training
             return FullName;
         }
 
+        public override int GetHashCode()
+        {
+            return FullName.GetHashCode();
+        }
+
+        //if users have the same FUllName they are the same entity
         public override bool Equals(object obj)
         {
             if(FullName == ((User)obj).FullName)
