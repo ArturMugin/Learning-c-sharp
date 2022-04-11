@@ -14,13 +14,8 @@ namespace training
 
         public void DoSometing()
         {
-            Student me = new Student();
-            me.FirstName = "Arthur";
-            me.Verified = true;
+            Student me = new Student("Arthur", "Mugin");
             me.HelloToConsole();
-
-
-
         }
 
     }
