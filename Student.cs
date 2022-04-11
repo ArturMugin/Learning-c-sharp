@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace training
 {
-    public class Student : User
+    public class Student : User, iTalk
     {
     
 
@@ -15,6 +15,8 @@ namespace training
         {
 
         }
+
+        public int test { get; set; }
 
         public override void HelloToConsole()
         {

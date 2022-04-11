@@ -16,6 +16,9 @@ namespace training
         {
             Student me = new Student("Arthur", "Mugin");
             me.HelloToConsole();
+
+            iTalk you = new Student("first", "last");
+
         }
 
     }
