@@ -30,28 +30,30 @@ namespace training
                     return $"My name is {FullName}";
                 }*/
 
-        public string Output(int times = 5)
+        public override bool Equals(object obj)
         {
-            string message = "";
-            for (int i = 0; i < times; i++){ 
-                message += $"{FullName}\n";
+            if(FullName == ((User)obj).FullName)
+            {
+                return true;
             }
-
-            return message;
+            else
+            { 
+                return false; 
+            }
         }
 
         public static void PrintUsers(List<User> users)
         {
             foreach (User user in users)
             {
-                Console.WriteLine(user.Output(1));
+                Console.WriteLine(user.ToString);
             }
         }
 
         public static void PrintUser(User user)
         {
             Console.Write("Static method. Print user");
-            Console.WriteLine(user.Output(1));
+            Console.WriteLine(user);
         }
 
         public static int Find(List<User> users, string fullName)

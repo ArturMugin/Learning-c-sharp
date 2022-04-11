@@ -18,7 +18,12 @@ namespace Training
             user.FirstName = "Arthur";
             user.LastName = "Mugin";
 
-            Console.WriteLine(user);
+
+            User user2 = new User();
+            user2.FirstName = "Arthur";
+            user2.LastName = "Mugin";
+
+            Console.WriteLine(user.Equals(user2));
 
         }
 
