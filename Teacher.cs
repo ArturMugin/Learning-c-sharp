@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace training
 {
-    internal class Student : User
+    internal class Teacher : User
     {
         public override void HelloToConsole()
         {
-            Console.WriteLine($"Hi, I am a student, my name is {FullName} I come from student.cs");
+            Console.WriteLine($"Helli, I am TEACHER, my name is {FullName.ToUpper()} and I come from Teacher.cs");
         }
     }
 }

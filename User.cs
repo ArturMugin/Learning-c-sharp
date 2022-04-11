@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace training
 {
-    internal abstract class User
+    internal class User
     {
         public bool Verified { get; set; } = false;
         public string FullName
@@ -20,7 +20,10 @@ namespace training
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public abstract void HelloToConsole();
+        public virtual void HelloToConsole()
+        {
+            Console.WriteLine($"Hi im {FullName}");
+        }
 
     }
 }
